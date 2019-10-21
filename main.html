@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>title</title>
+        <style type="text/css">
+            
+            table{
+                widows: 300px;
+                border-collapse: collapse;
+                background-color: lightblue;
+            }
+            table, td, th{
+                border: 1px solid black;
+                padding: 4px;
+            }
+            th{
+                text-align: left;
+                color: white;
+                background-color: darkblue;
+            }
+            tr.oddrow{
+                background-color: white;
+            }
+        </style>
+        <script type="text/javascript">
+            var diImage1;
+            var diImage2;
+            var diImage3;
+            var diImage4;
+
+            function start(){
+
+                var button = document.getElementById("addButton1");
+                button.addEventListener("click", add, false);
+
+                var button2 = document.getElementById("addButton2");
+                button2.addEventListener("click", add2, false);
+                
+            }
+
+            function add(){
+                textbox = document.getElementById("textbox1");
+                textbox2 = document.getElementById("textbox2");
+                
+
+                div1 = document.getElementById('div1');
+                div1.innerHTML += "add " + textbox.value + " , " + textbox2.value + "<br>";
+            }
+
+            function add2(){
+                textbox = document.getElementById("textbox1");
+                textbox2 = document.getElementById("textbox2");
+                
+
+                div1 = document.getElementById('div2');
+                div1.innerHTML += "add " + textbox.value + " , " + textbox2.value + "<br>";
+            }
+
+            window.addEventListener("load", start, false);        
+
+
+
+
+            
+            
+
+            
+        </script>
+    </head>
+    <body>
+        <form action="#">
+            <input type="button" id="addButton1" value="button1">
+            <input type="button" id="addButton2" value="button2">
+            <input type="text" id="textbox1" value="">
+            <input type="text" id="textbox2" value="">
+            
+        </form>
+
+        <div id='div1'>
+        </div>
+        <p>
+            adjnasdnsajdnasdjkasjk
+        </p>
+        <div id='div2'>
+        </div>
+        
+        
+
+    </body>
+
+</html>

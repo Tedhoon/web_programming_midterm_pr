@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .wrapper{
+            display : flex;
+            height: 200px;
+            width: 200px;
+            align-items: center;
+            <!-- 수직방향 가운데 정렬 -->
+        }
+
+        .hello{
+            margin : 0 10px;
+            text-align: center;
+            width: 20px;
+            height: 100px;
+            background: black;
+            float:left;
+
+            animation-iteration-count : infinite;
+            animation-direction : alternate;
+            animation-duration: 5s;
+        }
+
+        #a1{
+            animation-name : a1;
+        }
+        #a2{
+            animation-name : a2;
+        }
+        #a3{
+            animation-name : a3;
+        }
+        #a4{
+            animation-name : a4;
+        }
+        #a5{
+            animation-name : a5;
+        }
+
+
+        @keyframes a1{
+            0%{
+                height: 200px;
+
+            }
+            25%{
+                height: 100px;
+            }
+            50%{
+                height: 100px;
+            }
+            75%{
+                height: 100px;
+            }
+            100%{
+                height: 100px;
+            }
+        }@keyframes a2{
+            0%{
+                height: 100px;
+
+            }
+            25%{
+                height: 200px;
+            }
+            50%{
+                height: 100px;
+            }
+            75%{
+                height: 100px;
+            }
+            100%{
+                height: 100px;
+            }
+        }@keyframes a3{
+            0%{
+                height: 100px;
+            }
+            25%{
+                height: 100px;
+            }
+            50%{
+                height: 200px;
+            }
+            75%{
+                height: 100px;
+            }
+            100%{
+                height: 100px;
+            }
+        }@keyframes a4{
+            0%{
+                height: 100px;
+            }
+            25%{
+                height: 100px;
+            }
+            50%{
+                height: 100px;
+            }
+            75%{
+                height: 200px;
+            }
+            100%{
+                height: 100px;
+
+            }
+        }@keyframes a5{
+            0%{
+                height: 100px;
+            }
+            25%{
+                height: 100px;
+            }
+            50%{
+                height: 100px;
+            }
+            75%{
+                height: 100px;
+            }
+            100%{
+                height: 200px;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class ="wrapper">    
+        <div class = "hello" id = "a1"></div>
+        <div class = "hello" id = "a2"></div>
+        <div class = "hello" id = "a3"></div>
+        <div class = "hello" id = "a4"></div>
+        <div class = "hello" id = "a5"></div>
+    </div>
+</body>
+</html>

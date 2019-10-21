@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+        .figure
+        {
+            margin : 100px;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-name: slidein;
+        }
+
+
+                
+        @keyframes slidein {
+            0% {
+                border-bottom: 100px solid red;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                height: 0;
+                width: 100px;
+                transform: rotate(0deg);
+
+            }
+        
+            25% {
+                width: 0;
+                height: 0;
+                border-bottom: 100px solid red;
+                border-left: 100px solid transparent;
+                transform: rotate(180deg);
+            }
+
+            50% {
+                border-bottom: 100px solid red;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                height: 100px;
+                width: 100px;
+                transform: rotate(0deg);
+             
+            }
+
+            75%{
+                width: 100px;
+                height: 100px;
+                border: solid red 1px;
+                background-color: red;
+                transform: rotate(180deg);
+            }
+
+            100%{
+                width: 100px;
+                height: 100px;
+                border: solid red 1px;
+                background-color: red;
+                transform: rotate(0deg);
+                
+            }
+         
+        }
+
+        @keyframes hello {
+            from{
+                width : 100%;
+                transform: rotate(30deg);
+            }
+            to{
+                border-bottom: 100px solid red;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                height: 0;
+                width: 100px;
+                transform: rotate(90deg);
+            }
+        } 
+        @keyframes world {
+            from{
+                
+                transform: rotate(360deg);
+            }
+            to{
+               
+            
+            }
+        }
+
+
+
+
+
+
+
+
+        #star-five {
+            margin: 350px 350px;
+            position: relative;
+            display: block;
+            color: red;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+
+            animation-iteration-count: infinite;
+            animation-duration: 0.1s;
+            animation-name: world;
+
+          }
+          #star-five:before {
+            border-bottom: 80px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+          }
+          #star-five:after {
+            position: absolute;
+            display: block;
+            color: red;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+          }
+
+    </style>
+</head>
+<body>
+    <div class = "figure"></div>
+    <div id = "star-five"></div>
+
+</body>
+</html>
