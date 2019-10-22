@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding : 30px;
+            width: 750px;
+            height: 500px;
+            border : solid 1px green;
+        }
+        .section{
+            float: left;
+        }
+
+    </style>
+    <script>
+
+    function start(){
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", news, true);
+    }
+
+    function news(){
+        
+        setInterval(function(){
+
+
+            let txt1 = document.getElementById("txt1");
+            let txt2 = document.getElementById("txt2");
+
+            let txtlength = txt1.value.length
+            let showtext;
+
+                if (txtlength>30){
+                    showtext = txtlength-30;
+                }
+                else{
+                    showtext = 0;
+                }
+
+            
+            txt2.value = txt1.value.substr(showtext,30);
+
+        },100)
+    }
+    
+    window.addEventListener("load", start, false);
+
+    
+        
+    </script>
+</head>
+<body>
+    <div class = "section">
+        <div>-뉴스를 입력하세요</div><br>
+        <textarea id="txt1" cols="100" rows="10" placeholder="입력 버튼을 누르면 무한 실행 시작이고 보여지는건 30자인데 넘어가면 끝에서부터 30자로"></textarea> <br>
+        <div>-뉴스가 출력됩니다</div><br>
+        <textarea id="txt2" cols="100" rows="10"></textarea> <br>
+    </div>
+
+    <div class="section">
+        <button id="btn">입력</button>
+    </div>
+</body>
+</html>
